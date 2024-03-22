@@ -27,7 +27,7 @@ export function AccountMenu() {
           <div className="flex flex-col">
             <span>Rodrigo Brandão</span>
             <span className="text-xs font-normal text-muted-foreground">
-              FullStack-Developer | ReactJS | NodeJS
+              FullStack-Developer
             </span>
           </div>
           <ModeToggle />
