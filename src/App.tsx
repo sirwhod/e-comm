@@ -1,14 +1,14 @@
-import { Button } from './components/ui/button'
+import { RouterProvider } from 'react-router-dom'
+
 import { Toaster } from './components/ui/sonner'
 import { ThemeProvider } from './components/ui/theme-provider'
+import { router } from './Router'
 
 export function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="e-comm@token-theme">
-      <div>
-        <Button>Teste</Button>
-        <Toaster />
-      </div>
+      <RouterProvider router={router} />
+      <Toaster />
     </ThemeProvider>
   )
 }
