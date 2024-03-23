@@ -1,10 +1,12 @@
-import { Heart, ShoppingCart, Watch } from 'lucide-react'
+import { Heart, Watch } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
 
 import { Separator } from '../../ui/separator'
 import { AccountMenu } from './account-menu'
+import { CartDrawer } from './cartSheet/cart-drawer'
+import { CartSheet } from './cartSheet/cart-sheet'
 import { SearchCommandDialog } from './search-command'
 
 export function Header() {
@@ -22,7 +24,7 @@ export function Header() {
           <Separator orientation="vertical" />
         </div>
 
-        <div className="flex flex-1 items-center justify-center">
+        <div className="flex flex-1 lg:items-center lg:justify-center">
           <SearchCommandDialog />
         </div>
 
@@ -30,9 +32,8 @@ export function Header() {
           <Button variant="ghost" size="icon">
             <Heart className="h-5 w-5" />
           </Button>
-          <Button variant="ghost" size="icon">
-            <ShoppingCart className="h-5 w-5" />
-          </Button>
+          <CartSheet />
+          <CartDrawer />
           <AccountMenu />
         </div>
       </div>

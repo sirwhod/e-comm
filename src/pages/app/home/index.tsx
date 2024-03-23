@@ -1,13 +1,4 @@
-import { ShoppingCart } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+import { CardProductHome } from '@/components/app/products/card-product-home'
 
 import { CarouselHome } from './carousel'
 
@@ -19,27 +10,9 @@ export function Home() {
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
           Produtos em destaque
         </h3>
-        <div className="grid grid-cols-4 gap-4">
-          {Array.from({ length: 10 }, (_, i) => (
-            <Card key={i}>
-              <CardHeader>
-                <CardTitle>Product {i + 1}</CardTitle>
-                <CardContent>
-                  <img
-                    src="https://source.unsplash.com/featured/300x300.png"
-                    alt="product"
-                    className="h-48 w-48 rounded-md object-cover"
-                  />
-                </CardContent>
-                <CardFooter className="justify-between">
-                  <span className="text-lg font-semibold">R$ 49.90</span>
-                  <Button variant="outline" size="sm">
-                    <ShoppingCart className="mr-2 h-4 w-4" />
-                    Comprar
-                  </Button>
-                </CardFooter>
-              </CardHeader>
-            </Card>
+        <div className="grid w-full grid-cols-1 gap-4 px-2 lg:grid-cols-5 lg:px-0">
+          {Array.from({ length: 5 }, (_, i) => (
+            <CardProductHome i={i} key={i} />
           ))}
         </div>
       </section>

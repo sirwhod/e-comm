@@ -26,7 +26,7 @@ export function SearchCommandDialog() {
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === 'j' && (e.metaKey || e.ctrlKey)) {
+      if (e.key === 'y' && (e.metaKey || e.ctrlKey)) {
         e.preventDefault()
         setOpen((open) => !open)
       }
@@ -40,13 +40,14 @@ export function SearchCommandDialog() {
     <>
       <Button
         variant="outline"
-        className="w-full max-w-lg justify-between font-mono text-muted-foreground"
+        size="icon"
+        className="font-mono text-muted-foreground lg:w-full lg:max-w-lg lg:justify-between lg:px-2"
         onClick={() => setOpen(true)}
       >
         <Search className="h-4 w-4" />
-        Pesquisar
-        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-          <span className="text-xs">CTRL + </span>J
+        <span className="hidden lg:inline-flex">Pesquisar</span>
+        <kbd className="pointer-events-none hidden h-5  select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100 lg:inline-flex">
+          <span className="text-xs">CTRL + </span>Y
         </kbd>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
