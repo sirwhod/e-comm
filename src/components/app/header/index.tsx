@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button'
 
 import { Separator } from '../../ui/separator'
 import { AccountMenu } from './account-menu'
-import { CartDrawer } from './cartSheet/cart-drawer'
-import { CartSheet } from './cartSheet/cart-sheet'
+import { CartDrawer } from './cart/cart-drawer'
+import { CartSheet } from './cart/cart-sheet'
 import { SearchCommandDialog } from './search-command'
 
 export function Header() {

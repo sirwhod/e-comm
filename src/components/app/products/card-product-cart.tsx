@@ -6,7 +6,7 @@ export function CardProductCart({ i }: { i: number }) {
   return (
     <div className="flex h-56 w-auto items-center gap-2 rounded-lg border">
       <img
-        className="aspect-square overflow-hidden rounded-bl-lg rounded-tl-lg lg:h-full"
+        className="aspect-square max-h-56 max-w-56 overflow-hidden rounded-bl-lg rounded-tl-lg object-cover lg:h-full lg:max-w-20"
         src="https://source.unsplash.com/featured/224x224.png"
         alt=""
       />

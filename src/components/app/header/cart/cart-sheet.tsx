@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/sheet'
 
 import { CardProductCart } from '../../products/card-product-cart'
+import { CartFooter } from './cart-footer'
 
 export function CartSheet() {
   return (
@@ -29,12 +30,13 @@ export function CartSheet() {
           </SheetDescription>
         </SheetHeader>
         <ScrollArea className="max-h-[calc(100vh-1.5rem-3.5rem-1.5rem)] w-full">
-          <div className="flex max-h-[calc(100vh-1.5rem-3.5rem-1.5rem)] w-full flex-col gap-4">
+          <div className="flex max-h-[calc(100vh-1.5rem-3.5rem-1.5rem-10rem)] w-full flex-col gap-4">
             {Array.from({ length: 5 }, (_, i) => (
               <CardProductCart i={i} key={i} />
             ))}
           </div>
         </ScrollArea>
+        <CartFooter />
       </SheetContent>
     </Sheet>
   )

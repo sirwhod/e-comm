@@ -12,6 +12,7 @@ import {
 import { ScrollArea } from '@/components/ui/scroll-area'
 
 import { CardProductCart } from '../../products/card-product-cart'
+import { CartFooter } from './cart-footer'
 
 export function CartDrawer() {
   return (
@@ -34,6 +35,7 @@ export function CartDrawer() {
               ))}
             </div>
           </ScrollArea>
+          <CartFooter />
         </DrawerHeader>
       </DrawerContent>
     </Drawer>
